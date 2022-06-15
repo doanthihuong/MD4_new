@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Customers</h3>
+
+<form action="#" th:action="@{/customer/edit}" th:object="${customer}"
+      method="post" novalidate="novalidate">
+    <input th:value="${customer.getName()}" name="name">
+    <input th:value="${customer.getAddress()}" name="address">
+    <input th:value="${customer.getEmail()}" name="email">
+    <button>Edit</button>
+</form>
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

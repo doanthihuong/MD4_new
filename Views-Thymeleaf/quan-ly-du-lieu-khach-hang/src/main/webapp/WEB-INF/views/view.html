@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Customers</h3>
+
+<table th:object="${customer}" border="1">
+    <tr><th>ID</th><th>NAME</th><th>EMAIL</th><th>ADDRESS</th></tr>
+    <tr><td th:text="*{id}"></td><td th:text="*{name}"></td><td th:text="*{email}"></td><td th:text="*{address}"></td></tr>
+
+</table>
+
+</body>
+</html>
